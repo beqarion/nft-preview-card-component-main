@@ -77,6 +77,17 @@ Card
   opacity: 0;
   transition: var(--transition);
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .nft-img-container:hover .eye-icon {
   opacity: 1;
 }
@@ -88,7 +99,8 @@ Card
 /* card info */
 
 .nft-card-title {
-  margin: 1.5rem auto 1rem;
+  margin: 1.5rem auto 12px;
+
   color: var(--white);
   font-weight: 600;
   font-size: 22px;
@@ -105,13 +117,15 @@ Card
   font-weight: 300;
   font-size: 18px;
   line-height: 26px;
-  margin-bottom: 1.5rem;
+
+  margin-bottom: 1rem;
 }
 /* card footer */
 .nft-price-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+
+  margin-bottom: 1rem;
 }
 .nft-price-value {
   display: flex;
@@ -157,4 +171,16 @@ Card
 }
 .author-name:hover {
   color: var(--cyan);
+}
+
+@media screen and (min-width: 768px) {
+  .nft-card-title {
+    margin: 1.5rem auto 16px;
+  }
+  .nft-card-text {
+    margin-bottom: 1rem;
+  }
+  .nft-price-container {
+    margin-bottom: 1rem;
+  }
 }
